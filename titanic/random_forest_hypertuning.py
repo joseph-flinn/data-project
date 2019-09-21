@@ -5,9 +5,11 @@ Created on Fri Sep 20 12:43:13 2019
 @author: Joseph
 """
 
+# Import libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 def pre_process(dataset, dependant=None):
     X = dataset[["Pclass", "Sex", "Age", "SibSp", "Parch", "Fare"]].values
@@ -44,6 +46,8 @@ dataset = pd.read_csv("train.csv")
 comp_test_dataset = pd.read_csv("test.csv")
 
 X, y = pre_process(dataset, dependant=1)
+
+
 # Split data into training and test data
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
