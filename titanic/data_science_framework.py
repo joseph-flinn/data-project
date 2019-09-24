@@ -21,8 +21,8 @@ import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 # ========== Load data ==========
-data_raw = pd.read_csv("train.csv")
-data_val = pd.read_csv("test.csv")
+data_raw = pd.read_csv("data/train.csv")
+data_val = pd.read_csv("data/test.csv")
 
 data1 = data_raw.copy(deep=True)
 
@@ -798,7 +798,7 @@ data_val['Survived'] = mytree(data_val).astype(int)
 data_val['Survived'] = grid_hard.predict(data_val[data1_x_bin])
 
 submit = data_val[['PassengerId', 'Survived']]
-submit.to_csv("framework_submission.csv", index=False)
+submit.to_csv("submissions/framework_submission.csv", index=False)
 
 print('Validation Data Distribution: \n', data_val['Survived'].value_counts(normalize=True))
 submit.sample(10)
