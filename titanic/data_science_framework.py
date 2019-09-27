@@ -675,7 +675,7 @@ print('Soft Voting Test w/bin score 3*STD: {:.2f}'.format(vote_soft_cv['test_sco
 print('-'*20)
 
 
-# Hyperparameter Tuen with GridSearchCV
+# Hyperparameter Tune with GridSearchCV
 grid_n_estimator = [10, 50, 100, 300]
 grid_ratio = [0.1, 0.25, 0.5, 0.75, 1.0]
 grid_learn = [0.01, 0.03, 0.05, 0.1, 0.25]
