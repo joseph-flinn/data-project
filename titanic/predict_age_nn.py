@@ -86,4 +86,4 @@ print(classification_report(y_test, y_pred))
 print('\nParams:', tune_model.get_params())
 print('-'*20)
 
-print('AFTER DT Parameters: ', tune_model.best_params)
+print('AFTER DT Parameters: ', tune_model.best_params_)
