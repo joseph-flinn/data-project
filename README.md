@@ -19,6 +19,5 @@ network to the dataset to predict who survives. I am currently seeing very low
 results.
 
 ## Misc.
-=========
 A custom docker image was used to create the plotly chart for the travel 
 advisory project. The docker file is included in the docker directory.
